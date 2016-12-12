@@ -1,9 +1,10 @@
 def canCreateWordFromLetters(letters, word):
+    lettersList = list(letters)
     for character in word:
-        if character not in letters:
+        if character not in lettersList:
             return False
         else:
-            letters = letters.replace(character, "", 1)
+            lettersList.remove(character)
     return True
 
 def main():
